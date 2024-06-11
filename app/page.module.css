@@ -1,0 +1,11 @@
+.imageContainer {
+    height: 28px; /* Fixed height */
+    width: auto;
+    position: relative;
+  }
+  
+  .imageContainer img {
+    height: 100%;
+    width: auto; /* Automatically adjust width based on height */
+  }
+  
