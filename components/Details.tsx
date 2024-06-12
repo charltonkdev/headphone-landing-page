@@ -1,7 +1,7 @@
 "use client"
-import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { Button } from './ui/MovingBorder'
 
 const Details = () => {
   const line1Variants = {
@@ -15,6 +15,7 @@ const Details = () => {
       transition: {
         duration: 0.5,
         ease: "easeInOut",
+        delay: 0.5,
       },
     },
   };
@@ -30,12 +31,27 @@ const Details = () => {
       transition: {
         duration: 0.5,
         ease: "easeInOut",
-        delay: 0.5,  // Delay to start after the first line finishes
+        delay: 1,  // Delay to start after the first line finishes
       },
     },
   };
+  const detailsVariants = {
+    hidden: {
+      y: 30,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="relative h-full w-screen text-white flex flex-col items-center justify-center p-4 z-10">
+    <div className="relative h-full w-screen text-white flex flex-col items-center justify-center py-32 z-10">
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +62,11 @@ const Details = () => {
       <Image src="/images/headphone.png" alt="Headphone" className="w-auto md:h-full" width={650} height={650} />
       <div className="absolute h-full w-full top-0 flex flex-col justify-center">
         <div className="absolute w-full h-full flex flex-col items-center">
-          <div className="absolute top-[20%] left-0 flex flex-col items-start pl-4 w-[30vw]">
+          <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={detailsVariants}
+          className="absolute top-[20%] left-0 flex flex-col items-start pl-4 w-[30vw]">
             <h2 className="text-xl font-semibold">High Quality Foam</h2>
             <p className="text-sm w-[15vw]">Sponge foam with superior quality, so that it is used for a long time, the head does not feel hot.</p>
             <svg width="600" height="400" className="absolute left-[40%] top-1" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +80,7 @@ const Details = () => {
                 variants={line1Variants}
               />
               <motion.path
-                d="M180 10 L350 120"
+                d="M180 10 L350 180"
                 stroke="white"
                 strokeWidth="3"
                 initial="hidden"
@@ -68,8 +88,12 @@ const Details = () => {
                 variants={line2Variants}
               />
             </svg>
-          </div>
-          <div className="absolute top-[20%] right-0 flex flex-col pl-4">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={detailsVariants}
+            className="absolute top-[40%] right-0 flex flex-col pl-4">
             <h2 className="text-xl font-semibold text-right">Premium Foam</h2>
             <p className="text-sm text-right w-[15vw]">Sponge foam with premium understanding so that when used for a long time it doesn't feel hot in the ears.</p>
             <svg width="550" height="400" className="absolute overflow-visible right-[60%] top-1" xmlns="http://www.w3.org/2000/svg">
@@ -83,7 +107,7 @@ const Details = () => {
                 variants={line1Variants}
               />
               <motion.path
-                d="M351 9 L150 300"
+                d="M351 9 L150 160"
                 stroke="white"
                 strokeWidth="3"
                 initial="hidden"
@@ -91,14 +115,18 @@ const Details = () => {
                 variants={line2Variants}
               />
             </svg>
-          </div>
-          <div className="absolute bottom-[10%] left-0 flex flex-col items-start pl-4 ">
+          </motion.div>
+          <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={detailsVariants}
+          className="absolute top-[45%] left-0 flex flex-col items-start pl-4 ">
             <h2 className="text-xl font-semibold">Material B-H23</h2>
             <p className="text-sm w-[15vw]">Long-lasting quality material and color that does not fade over time.</p>
-            <svg width="600" height="400" className="absolute left-[70%] bottom-1" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10" cy="330" r="5" fill="white" />
+            <svg width="600" height="400" className="absolute left-[70%] top-1" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="10" cy="10" r="5" fill="white" />
               <motion.path
-                d="M10 330 H180"
+                d="M10 10 H180"
                 stroke="white"
                 strokeWidth="3"
                 initial="hidden"
@@ -106,7 +134,7 @@ const Details = () => {
                 variants={line1Variants}
               />
               <motion.path
-                d="M180 330 L280 120"
+                d="M180 10 L290 220"
                 stroke="white"
                 strokeWidth="3"
                 initial="hidden"
@@ -114,12 +142,16 @@ const Details = () => {
                 variants={line2Variants}
               />
             </svg>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="mt-8 flex space-x-4">
-        <button className="bg-lime-500 text-black px-4 py-2 rounded-full text-xs">Add to Basket</button>
-        <button className="border border-lime-500 text-white px-4 py-2 rounded-full text-xs">Detail Product</button>
+        <Button className='bg-lime-400 text-black hover:bg-black hover:text-white duration-700 hover:duration-700 hover:border-slate-100 border-[0.5px]'>
+          Buy Now
+        </Button>
+        <Button>
+          More Details
+        </Button>
       </div>
     </div>
   )

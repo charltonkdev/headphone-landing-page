@@ -1,16 +1,32 @@
 "use client"
-import { motion } from 'framer-motion'
+import { delay, motion } from 'framer-motion'
 import { useRef } from 'react'
 import Image from 'next/image'
 import { Button } from './ui/MovingBorder'
 
 const imageVariants = {
     initial: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
+    visible: { opacity: 1, y: 0,  transition: { duration: 0.5 } },
+  };
+  
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+        duration: 0.3
+      }
+    }
+  };
+  
+  const staggerItem = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
   };
 
 export const Spec = () => {
-    const ref = useRef(null);
+  const ref = useRef(null);
 
   return (
     <div ref={ref} className='overflow-y-hidden relative w-full h-screen z-10 flex flex-col md:flex-row justify-between py-32'>
@@ -42,32 +58,36 @@ export const Spec = () => {
             className="flex absolute right-0 md:right-44 top-0 flex-col">
             <Image alt='headphone' src='/images/headphone01.png' width={607} height={850} />
           </motion.div>
-        <div className='flex flex-col px-8 md:max-w-[13vw] mt-10 md:mt-0'>
-            <div className='flex flex-col relative'>
-              <span className='text-lime-400 text-4xl'>
-                98K
-              </span>
-              <p className='text-xs pt-2'>
-                Customer satisfaction with our products
-              </p>
-            </div>
-            <div className='flex flex-col relative mt-8'>
-              <span className='text-lime-400 text-4xl'>
-                132K
-              </span>
-              <p className='text-xs pt-2'>
-                Wide range of products available
-              </p>
-            </div>
-            <div className='flex flex-col relative mt-8'>
-              <span className='text-lime-400 text-4xl'>
-                36K
-              </span>
-              <p className='text-xs pt-2'>
-                Has spread all over the world
-              </p>
-            </div>
-        </div>
+        <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        className='flex flex-col px-8 md:max-w-[13vw] mt-10 md:mt-0'>
+            <motion.div className='flex flex-col relative' variants={staggerItem}>
+            <span className='text-lime-400 text-4xl'>
+              98K
+            </span>
+            <p className='text-xs pt-2'>
+              Customer satisfaction with our products
+            </p>
+          </motion.div>
+          <motion.div className='flex flex-col relative mt-8' variants={staggerItem}>
+            <span className='text-lime-400 text-4xl'>
+              132K
+            </span>
+            <p className='text-xs pt-2'>
+              Wide range of products available
+            </p>
+          </motion.div>
+          <motion.div className='flex flex-col relative mt-8' variants={staggerItem}>
+            <span className='text-lime-400 text-4xl'>
+              36K
+            </span>
+            <p className='text-xs pt-2'>
+              Has spread all over the world
+            </p>
+          </motion.div>
+        </motion.div>
     </div>
   )
 }

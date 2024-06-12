@@ -2,7 +2,7 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import styles from '../app/page.module.css'; 
-import { motion, useInView  } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const containerVariants = {
   hidden: { opacity: 1 },

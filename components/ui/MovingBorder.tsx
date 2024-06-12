@@ -124,6 +124,8 @@ export const MovingBorder = ({
         />
       </svg>
       <motion.div
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
         style={{
           position: "absolute",
           top: 0,
