@@ -96,7 +96,7 @@ const Details = () => {
             variants={detailsVariants}
             className="md:absolute md:top-[40%] md:right-0 flex flex-col pl-4 mb-8">
             <h2 className="text-xl font-semibold md:text-right">Premium Foam</h2>
-            <p className="text-sm md:text-right md:w-[15vw]">Sponge foam with premium understanding so that when used for a long time it doesn't feel hot in the ears.</p>
+            <p className="text-sm md:text-right md:w-[15vw]">Sponge foam with premium understanding so that when used for a long time it doesn&apos;t feel hot in the ears.</p>
             {/*  
             <svg width="550" height="400" className="absolute overflow-visible right-[60%] top-1" xmlns="http://www.w3.org/2000/svg">
               <circle cx="550" cy="10" r="5" fill="white" />

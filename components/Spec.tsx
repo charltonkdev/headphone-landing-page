@@ -44,7 +44,7 @@ export const Spec = () => {
              whileInView={{opacity: 1, x: 0}}
              transition={{ ease: 'easeInOut', duration:.5, delay: .5}}
              className='px-8 text-white border-l-lime-400 border-l-4 mt-10 max-w-sm text-sm'>
-              Using the world's latest technology, we maximize the sound that is comfortable to hear
+              Using the world&apos;s latest technology, we maximize the sound that is comfortable to hear
             </motion.p>
             <Button className='bg-lime-400 text-black hover:bg-black hover:text-white duration-700 hover:duration-700 hover:border-slate-100 border-[0.5px]'>
               Read More
