@@ -29,7 +29,7 @@ export const Spec = () => {
   const ref = useRef(null);
 
   return (
-    <div ref={ref} className='overflow-y-hidden relative w-full h-screen z-10 flex flex-col md:flex-row justify-between py-32'>
+    <div id="spec" ref={ref} className='overflow-y-hidden relative w-full h-screen z-10 flex flex-col md:flex-row justify-between py-32'>
         <div className='md:w-[45vw] z-10 grow-3'>
             <motion.h2
                 initial={{ opacity:0, y: 50}}
@@ -43,7 +43,7 @@ export const Spec = () => {
              initial={{ opacity:0, x: -50}}
              whileInView={{opacity: 1, x: 0}}
              transition={{ ease: 'easeInOut', duration:.5, delay: .5}}
-             className='px-8 text-gray-400 border-l-lime-400 border-l-4 mt-10 max-w-sm text-sm'>
+             className='px-8 text-white border-l-lime-400 border-l-4 mt-10 max-w-sm text-sm'>
               Using the world's latest technology, we maximize the sound that is comfortable to hear
             </motion.p>
             <Button className='bg-lime-400 text-black hover:bg-black hover:text-white duration-700 hover:duration-700 hover:border-slate-100 border-[0.5px]'>

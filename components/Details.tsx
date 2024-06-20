@@ -60,15 +60,16 @@ const Details = () => {
         H24X headphone model with a contemporary design style
       </motion.h1>
       <Image src="/images/headphone.png" alt="Headphone" className="w-auto md:h-full" width={650} height={650} />
-      <div className="absolute h-full w-full top-0 flex flex-col justify-center">
-        <div className="absolute w-full h-full flex flex-col items-center">
+      <div className="md:absolute h-full md:max-w-[40vw] md:mt-16 w-full top-0 flex flex-col justify-center">
+        <div className="md:absolute w-full h-full flex flex-col items-center">
           <motion.div
           initial="hidden"
           whileInView="visible"
           variants={detailsVariants}
-          className="absolute top-[20%] left-0 flex flex-col items-start pl-4 w-[30vw]">
+          className="md:absolute md:top-[20%] md:left-32 flex flex-col items-start pl-4 md:w-[30vw] mb-8">
             <h2 className="text-xl font-semibold">High Quality Foam</h2>
-            <p className="text-sm w-[15vw]">Sponge foam with superior quality, so that it is used for a long time, the head does not feel hot.</p>
+            <p className="text-sm md:w-[15vw]">Sponge foam with superior quality, so that it is used for a long time, the head does not feel hot.</p>
+            {/*  
             <svg width="600" height="400" className="absolute left-[40%] top-1" xmlns="http://www.w3.org/2000/svg">
               <circle cx="20" cy="10" r="5" fill="white" />
               <motion.path
@@ -87,15 +88,16 @@ const Details = () => {
                 whileInView="visible"
                 variants={line2Variants}
               />
-            </svg>
+            </svg>*/}
           </motion.div>
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={detailsVariants}
-            className="absolute top-[40%] right-0 flex flex-col pl-4">
-            <h2 className="text-xl font-semibold text-right">Premium Foam</h2>
-            <p className="text-sm text-right w-[15vw]">Sponge foam with premium understanding so that when used for a long time it doesn't feel hot in the ears.</p>
+            className="md:absolute md:top-[40%] md:right-0 flex flex-col pl-4 mb-8">
+            <h2 className="text-xl font-semibold md:text-right">Premium Foam</h2>
+            <p className="text-sm md:text-right md:w-[15vw]">Sponge foam with premium understanding so that when used for a long time it doesn't feel hot in the ears.</p>
+            {/*  
             <svg width="550" height="400" className="absolute overflow-visible right-[60%] top-1" xmlns="http://www.w3.org/2000/svg">
               <circle cx="550" cy="10" r="5" fill="white" />
               <motion.path
@@ -114,15 +116,16 @@ const Details = () => {
                 whileInView="visible"
                 variants={line2Variants}
               />
-            </svg>
+            </svg>*/}
           </motion.div>
           <motion.div
           initial="hidden"
           whileInView="visible"
           variants={detailsVariants}
-          className="absolute top-[45%] left-0 flex flex-col items-start pl-4 ">
+          className="md:absolute md:top-[45%] md:left-0 flex flex-col items-start pl-4 w-full">
             <h2 className="text-xl font-semibold">Material B-H23</h2>
-            <p className="text-sm w-[15vw]">Long-lasting quality material and color that does not fade over time.</p>
+            <p className="text-sm md:w-[15vw]">Long-lasting quality material and color that does not fade over time.</p>
+            {/* 
             <svg width="600" height="400" className="absolute left-[70%] top-1" xmlns="http://www.w3.org/2000/svg">
               <circle cx="10" cy="10" r="5" fill="white" />
               <motion.path
@@ -141,7 +144,7 @@ const Details = () => {
                 whileInView="visible"
                 variants={line2Variants}
               />
-            </svg>
+            </svg>*/}
           </motion.div>
         </div>
       </div>

@@ -29,7 +29,7 @@ const scrollBtnVariants = {
 export const Hero = () => {
 
   return (
-    <section className="relative w-full h-screen flex flex-col items-center justify-center">
+    <div id="home" className="relative w-full h-screen flex flex-col items-center justify-center">
       
         <div className="flex w-full h-full text-white z-10">
           <div className="relative z-10 flex flex-col flex-start justify-end p-5">
@@ -83,10 +83,10 @@ export const Hero = () => {
             initial="initial"
             animate="whileInView"
             transition={{ duration: 1, ease: 'easeIn', delay: .5}}
-            className="flex absolute right-0 md:-right-44 top-0 flex-col">
+            className="flex absolute right-10 md:-right-44 top-16 md:top-0 flex-col">
             <Image alt='headphone' src='/images/headphone02.png' width={850} height={850} />
           </motion.div>
         </div>
-    </section>
+    </div>
   );
 };
