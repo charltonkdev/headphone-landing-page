@@ -41,7 +41,7 @@ export const Spec = () => {
             </motion.h2>
             <motion.p
              initial={{ opacity:0, x: -50}}
-             whileInView={{opacity: 1, x: 0}}
+             animate={{opacity: 1, x: 0}}
              transition={{ ease: 'easeInOut', duration:.5, delay: .5}}
              className='px-8 text-white border-l-lime-400 border-l-4 mt-10 max-w-sm text-sm'>
               Using the world&apos;s latest technology, we maximize the sound that is comfortable to hear
@@ -53,7 +53,7 @@ export const Spec = () => {
         <motion.div
             variants={imageVariants}
             initial="initial"
-            whileInView="visible"
+            animate="visible"
             transition={{ duration: 1, ease: 'easeIn', delay: .5}}
             className="flex absolute right-0 md:right-44 top-0 flex-col">
             <Image alt='headphone' src='/images/headphone01.png' width={607} height={850} />
@@ -61,7 +61,7 @@ export const Spec = () => {
         <motion.div
         variants={staggerContainer}
         initial="hidden"
-        whileInView="visible"
+        animate="visible"
         className='flex flex-col px-8 md:max-w-[13vw] mt-10 md:mt-0'>
             <motion.div className='flex flex-col relative' variants={staggerItem}>
             <span className='text-lime-400 text-4xl'>

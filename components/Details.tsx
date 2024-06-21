@@ -54,7 +54,7 @@ const Details = () => {
     <div className="relative h-full w-screen text-white flex flex-col items-center justify-center py-32 z-10">
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ ease: 'easeInOut', duration: .5, delay: .3 }}
         className="text-3xl md:text-4xl lg:text-5xl max-w-3xl text-center mb-8">
         H24X headphone model with a contemporary design style
@@ -64,7 +64,7 @@ const Details = () => {
         <div className="md:absolute w-full h-full flex flex-col items-center">
           <motion.div
           initial="hidden"
-          whileInView="visible"
+          animate="visible"
           variants={detailsVariants}
           className="md:absolute md:top-[20%] md:left-32 flex flex-col items-start pl-4 md:w-[30vw] mb-8">
             <h2 className="text-xl font-semibold">High Quality Foam</h2>
@@ -92,7 +92,7 @@ const Details = () => {
           </motion.div>
           <motion.div
             initial="hidden"
-            whileInView="visible"
+            animate="visible"
             variants={detailsVariants}
             className="md:absolute md:top-[40%] md:right-0 flex flex-col pl-4 mb-8">
             <h2 className="text-xl font-semibold md:text-right">Premium Foam</h2>
@@ -120,7 +120,7 @@ const Details = () => {
           </motion.div>
           <motion.div
           initial="hidden"
-          whileInView="visible"
+          animate="visible"
           variants={detailsVariants}
           className="md:absolute md:top-[45%] md:left-0 flex flex-col items-start pl-4 w-full">
             <h2 className="text-xl font-semibold">Material B-H23</h2>

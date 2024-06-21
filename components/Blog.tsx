@@ -8,7 +8,7 @@ const Blog = () => {
     <div id="blog" className='flex relative items-center justify-center flex-col w-full h-full z-10 py-24'>
         <motion.h2
         initial={{ opacity:0, x: -50 }}
-        whileInView={{ opacity: 1, x: 1}}
+        animate={{ opacity: 1, x: 1}}
         transition={{ ease: 'easeInOut', duration: .5}}
         className='text-4xl text-center font-bold md:max-w-md mb-14'>
             Our Blog
@@ -16,7 +16,7 @@ const Blog = () => {
         <div className='flex flex-col md:flex-row relative max-w-5xl justify-start'>
             <motion.div
              initial={{ opacity:0, x: -50 }}
-             whileInView={{ opacity: 1, x: 1}}
+             animate={{ opacity: 1, x: 1}}
              transition={{ ease: 'easeInOut', duration: .5}}
              className='flex md:w-auto w-full items-center justify-center mb-10'>
                 <Image alt='blog' src='/images/blog.webp' width={500} height={500} />
@@ -24,7 +24,7 @@ const Blog = () => {
             
             <motion.div
              initial={{ opacity:0, x: -50}}
-             whileInView={{ opacity: 1, x: 0}}
+             animate={{ opacity: 1, x: 0}}
              transition={{ staggerChildren: 0.2, ease: 'easeInOut', duration:.5, delay: .5}}
              className='flex flex-col md:px-12 md:max-w-[50vw]'>
                 <h2 className='leading-[1.3em] text-xl md:text-[xl] md:max-w-[60vw]'

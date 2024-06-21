@@ -26,7 +26,7 @@ export const Partner = () => {
     <div id="brand" ref={ref} className='flex items-center w-full justify-center flex-col z-20 py-24'>
         <motion.h4
          initial={{ opacity:0, y: 50}}
-         whileInView={{ opacity: 1, y: 0 }}
+         animate={{ opacity: 1, y: 0 }}
          transition={{ ease: 'easeInOut', duration:.5, delay: .3}}
          className='text-sm pb-10'>
             Our partner company
@@ -35,7 +35,7 @@ export const Partner = () => {
           className="relative w-full md:flex grid grid-cols-3 gap-10 justify-evenly items-center"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible" // Use whileInView instead of animate
+          animate="visible" // Use whileInView instead of animate
         >
           {['partner01', 'partner02', 'partner03', 'partner04', 'partner05', 'partner06'].map((partner, index) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
