@@ -33,7 +33,7 @@ export const Spec = () => {
         <div className='md:w-[45vw] z-10 grow-3'>
             <motion.h2
                 initial={{ opacity:0, y: 50}}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ ease: 'easeInOut', duration:.5, delay: .3}}
                 className='leading-[1.3em] text-4xl md:text-[3vw]'
               >
